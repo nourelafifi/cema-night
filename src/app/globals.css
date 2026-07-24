@@ -1,26 +1,31 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Cema Night Color Palette */
+  --color-midnight: #0B0B0F;
+  --color-charcoal: #14141B;
+  --color-slate-card: #1D1D26;
+  --color-gold: #F5B942;
+  --color-amber: #D98E2B;
+  --color-soft-gold: #FFE3A3;
+  --color-ivory: #F8F5EE;
+  --color-muted-gray: #A7A7B0;
+  --color-dark-border: #2B2B35;
+  --color-emerald-success: #36C98F;
+  --color-soft-red: #EF6262;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Custom Glows & Shadows */
+  --shadow-gold-glow: 0 0 25px rgba(245, 185, 66, 0.25);
+  --shadow-card-hover: 0 12px 30px rgba(0, 0, 0, 0.5);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-midnight);
+  color: var(--color-ivory);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+button:hover {
+  cursor: pointer;
 }
